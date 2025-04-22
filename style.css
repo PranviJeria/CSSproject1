@@ -1,0 +1,435 @@
+/* 
+ Initialization
+*/
+
+/* Apply box-sizing and eliminate default margins and padding */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 
+
+Basic Styling
+
+*/
+
+/* Set up a background with gradient overlay and fixed image */
+body {
+  font-family: 'Verdana', Arial, sans-serif; /* Clear and legible font stack */
+  background: linear-gradient(rgba(240, 237, 239, 0.8), rgba(240, 239, 239, 0.8)),
+              url('background.jpg') no-repeat center center fixed;
+  background-size: cover; /* Full viewport background */
+  color: #fbe3e3; 
+  line-height: 1.6; /* Spacing between lines */
+  font-size: 1rem; /* Standard font size */
+}
+
+/* 
+
+Text Styling
+ 
+*/
+
+/* Standardize all heading elements */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Modern sans-serif font */
+    letter-spacing: normal; /* Default spacing for clarity */
+    color: #ffffff; /* Light color for better contrast */
+    margin-bottom: 0.75em;
+    text-transform: none; /* Preserve text casing */
+    text-shadow: none; /* Clean look without shadows */
+    font-weight: 700; 
+    line-height: 1.2; /* Compact line spacing */
+  }
+
+/* Heading 1 specific styling */
+h1 {
+    text-align: center;
+    margin: 1.5em auto;
+    padding: 1em 2em;
+    border: none;
+    background: linear-gradient(135deg, #032539 0%, #b9c6dc 100%); /* Gradient effect */
+    color: #ffffff; /* White text for clear visibility */
+    font-family: 'Poppins', 'Helvetica Neue', sans-serif; /* Trendy font */
+    font-size: 3em;
+    border-radius: 12px; /* Rounded edges */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+/* Default appearance for links */
+a {
+  color: #fcbe8e; /* Light orange color for links */
+  text-decoration: none; /* Remove underline by default */
+  transition: color 0.2s, box-shadow 0.2s; 
+}
+
+/* Modify links on hover*/
+a:hover, a:focus {
+  color: #4b86b4; /* Darker shade on hover */
+  text-decoration: underline;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for emphasis */
+}
+
+/* Styling for unordered and ordered lists */
+ul, ol {
+  margin-left: 1.5em;
+  margin-bottom: 1em;
+}
+
+/* 
+
+Layout and Containers
+ 
+*/
+
+/* Main content container setup */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5em;
+  background: #edbcbc; /* Soft pink background */
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(42, 77, 105, 0.08); /* Light shadow for a lift effect */
+}
+
+/* 
+
+Navigation Bar
+*/
+
+/* Setup for navigation bar */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #ea4248; /* Red background for nav */
+  color: #fff;
+  padding: 1em;
+  border-radius: 8px;
+  margin-bottom: 2em;
+}
+
+/* Grid layout for responsive design */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #fa991c; /* Orange background */
+    color: #faf8f8; /* Light color for contrast */
+    padding: 1em 2em;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow */
+    margin-bottom: 2em;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+  }
+
+/* Hover effect for navigation links */
+nav a:hover, nav a:focus {
+  background-color: #fff;
+  color: #2a4d69; /* Dark blue on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Remove default list styling for nav */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Individual nav list items */
+nav ul li {
+  margin: 0.5em;
+}
+
+/* Links within navigation */
+nav ul a {
+  text-decoration: none;
+  color: inherit;
+  padding: 0.5em 1em;
+  border: none;
+  background: none;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 700px) {
+  nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    margin: 0.5em;
+  }
+}
+
+/* 
+Additional Effects 
+*/
+
+/* Apply gradient to container for a modern touch */
+.container {
+    background: linear-gradient(135deg, #1c768f 80%, #032539 100%);
+    box-shadow: 0 8px 32px rgba(42, 77, 105, 0.12);
+    padding: 2em;            /* Internal spacing */
+    margin: 2em auto;        /* External spacing */
+    border-radius: 0;        /* Sharp corners */
+  }
+
+/* Add text shadow to h1 for added depth */
+h1 {
+  text-shadow: 1px 2px 6px #626a75;
+}
+
+/* 
+Blockquotes Styling
+*/
+
+/* Style blockquotes to stand out */
+blockquote {
+    border: none;
+    padding: 2em;
+    margin: 2em auto;
+    max-width: 700px;
+    background: #ffffff;
+    color: #222222;
+    font-style: normal;
+    font-family: 'Merriweather', serif;
+    font-size: 1.2em;
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  }
+  
+  blockquote::before {
+    content: "“";
+    font-size: 3em;
+    color: #cccccc;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    line-height: 1;
+  }
+  
+  blockquote::after {
+    content: "”";
+    font-size: 3em;
+    color: #cccccc;
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    line-height: 1;
+  }
+
+
+
+/* Strong focus outline for improved accessibility */
+a:focus {
+  outline: 3px solid #f37736;
+  outline-offset: 4px;
+}
+
+/* Skip link visibility for keyboard users */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Reveal skip link when focused */
+.skip-link:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  background: #f37736;
+  color: #fff;
+  padding: 0.5em;
+  z-index: 1000;
+}
+
+/* 
+ Section Styles
+
+*/
+
+/* Remove unwanted star effects */
+#styles .features::after,
+.features.patterned::after {
+  display: none;
+}
+
+/* Styling for "How it Works" section */
+.how-it-works {
+  border: 2px solid #ccc;
+  padding: 1em;
+  margin: 1em 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+/* Style for stage headings */
+.style-stage-heading {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: #f37736;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Featured styles box */
+.featured-styles {
+  border: 2px solid #ccc;
+  padding: 1em;
+  margin: 1em 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+/* 
+
+SVG & Layout Styles
+
+*/
+
+/* Basic styling for svg icons */
+svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Header container setup */
+header .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* 
+
+Feature Grid
+
+*/
+
+/* Layout for the features grid */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  padding: 1em 0;
+  list-style: none;
+  margin: 0;
+}
+
+/* Individual feature card setup */
+.features li {
+    flex: 1 1 auto;
+    width: 200px;
+    height: 200px;
+    background-color: #fbf3f2;
+    border: 2px solid #333;
+    border-radius: 50%; /* Circular layout */
+    text-align: center;
+    padding: 2em;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2em auto;
+  }
+  
+/* Inside content of each feature card */
+.features li span {
+  display: block;
+  margin-top: 0.5em;
+}
+
+/* Links within feature cards */
+.features li a {
+  text-decoration: none;
+  color: #011a1a;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for feature card links */
+.features li a:hover {
+  color: #f37736;
+}
+/* Footer Styling */
+footer {
+    background-color: #fa991c; /* Dark blue background */
+    color: #fff; /* White text */
+    text-align: center;
+    padding: 2em 1em;
+    font-size: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  footer a {
+    color: #fcbe8e; /* Light orange color for links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease;
+  }
+  
+  footer a:hover {
+    color: #fa991c; /* Dark orange on hover */
+  }
+  
+  /* Footer Content Layout */
+  footer .footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1em;
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+  
+  footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 1em;
+  }
+  
+  footer .social-icons a {
+    font-size: 1.5em;
+    color: #fff;
+    transition: color 0.2s ease;
+  }
+  
+  footer .social-icons a:hover {
+    color: #fcbe8e; /* Change color on hover */
+  }
+  
+/* citation: codeacademy.com
+   ,https://github.com/smccrindle/comp1054-25w*/
